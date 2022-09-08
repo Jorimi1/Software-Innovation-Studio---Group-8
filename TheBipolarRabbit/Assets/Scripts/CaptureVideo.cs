@@ -9,6 +9,7 @@ public class CaptureVideo : MonoBehaviour
         WebCamTexture webcamTexture = new WebCamTexture();
         Renderer renderer = GetComponent<Renderer>();
         renderer.material.mainTexture = webcamTexture;
+	    renderer.material.shader = Shader.Find("Unlit/Texture");
         webcamTexture.Play();
     }
 }
