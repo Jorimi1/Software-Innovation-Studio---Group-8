@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         if(player.transform.position.x > LeftLimit && player.transform.position.x < RightLimit){
-            transform.position = new Vector3(player.transform.position.x, transform.position.y, -10f);
+            transform.position = new Vector3(player.transform.position.x, player.transform.position.y + 1.8f, -10f);
         }
     }
 }
