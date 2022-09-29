@@ -25,7 +25,7 @@ public class ScoreManager : MonoBehaviour
         Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
 
-        if (sceneName == "LevelBoss")
+        if (sceneName != "Level1")
         {
             collectedNumber = PlayerPrefs.GetInt("collectedapple");
             if (collectedNumber == 1)

@@ -10,6 +10,12 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        GameObject find = GameObject.FindGameObjectWithTag("Player");
+        if(find == null){
+            player = Instantiate(player, new Vector3(0, 0, -1), Quaternion.identity);
+        }else{
+            player = find;
+        }
         
     }
 
