@@ -14,6 +14,8 @@ public class ScoreManager : MonoBehaviour
     public static float Score { set; get; }
     public static int collectedNumber = 0;
 
+    void Awake(){}
+
     void Start()
     {
         //disable all images
@@ -66,10 +68,13 @@ public class ScoreManager : MonoBehaviour
         }
         else if (collectedNumber == 2)
         {
+            image1.enabled = true;
             image2.enabled = true;
         }
         else if (collectedNumber == 3)
         {
+            image1.enabled = true;
+            image2.enabled = true;
             image3.enabled = true;
         }
 
