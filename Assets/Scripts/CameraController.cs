@@ -12,7 +12,7 @@ public class CameraController : MonoBehaviour
     {
         GameObject find = GameObject.FindGameObjectWithTag("Player");
         if(find == null){
-            player = Instantiate(player, new Vector3(0, 0, -1), Quaternion.identity);
+            player = Instantiate(player, new Vector3(0, -1.5f, -1), Quaternion.identity);
         }else{
             player = find;
         }
