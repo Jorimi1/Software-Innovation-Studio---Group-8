@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
-public class Level1ToDia1 : MonoBehaviour
+public class BossToWin : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -20,7 +19,7 @@ public class Level1ToDia1 : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Dialogue1");
+            SceneManager.LoadScene("Dialogue2");
         }
     }
 }

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Transform firePoint;
     private float horizontal;
     private float vertical;
     private float speed = 8f;
@@ -73,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
             ac.SetBool("MoveLeft", false); 
             ac.SetBool("BacktoFaceLeft", false);
             isFacingRight = true;
+            //firePoint.rotation = Quaternion.Euler(0, 180, 0);
         }
 
         if(horizontal < 0 && !isClimbing){
@@ -81,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
             ac.SetBool("MoveLeft", true); 
             ac.SetBool("BacktoFaceLeft", false);
             isFacingRight = false;
+            //firePoint.rotation = Quaternion.Euler(0, 0, 0);
         }
 
         if(horizontal == 0 && isFacingRight && !isClimbing){
@@ -89,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
             ac.SetBool("MoveLeft", false); 
             ac.SetBool("BacktoFaceLeft", false);
             isFacingRight = true;
+            //firePoint.rotation = Quaternion.Euler(0, 180, 0);
         }
 
         if(horizontal == 0 && !isFacingRight && !isClimbing){
@@ -97,7 +101,9 @@ public class PlayerMovement : MonoBehaviour
             ac.SetBool("MoveLeft", false); 
             ac.SetBool("BacktoFaceLeft", true);
             isFacingRight = false;
+            //firePoint.rotation = Quaternion.Euler(0, 0, 0);
         }
+     
     }
 
     void OnTriggerEnter2D(Collider2D other){
