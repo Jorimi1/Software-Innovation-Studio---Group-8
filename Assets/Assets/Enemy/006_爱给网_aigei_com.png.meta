@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -126,6 +127,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -485,6 +510,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      "006_\u7231\u7ED9\u7F51_aigei_com_8": -2097797723672488333
+      "006_\u7231\u7ED9\u7F51_aigei_com_12": 6166782214153527336
+      "006_\u7231\u7ED9\u7F51_aigei_com_7": -5694265107768295599
+      "006_\u7231\u7ED9\u7F51_aigei_com_10": 8241819014505775738
+      "006_\u7231\u7ED9\u7F51_aigei_com_9": 1620667633750206226
+      "006_\u7231\u7ED9\u7F51_aigei_com_15": -5137643730014868231
+      "006_\u7231\u7ED9\u7F51_aigei_com_2": -4455894865579764176
+      "006_\u7231\u7ED9\u7F51_aigei_com_13": 3254392382455942062
+      "006_\u7231\u7ED9\u7F51_aigei_com_6": -6891995412701811652
+      "006_\u7231\u7ED9\u7F51_aigei_com_0": -163379218673444756
+      "006_\u7231\u7ED9\u7F51_aigei_com_11": -7196069753458824150
+      "006_\u7231\u7ED9\u7F51_aigei_com_4": 9114390288404587414
+      "006_\u7231\u7ED9\u7F51_aigei_com_3": -7205534321178042610
+      "006_\u7231\u7ED9\u7F51_aigei_com_1": -6850993833962885796
+      "006_\u7231\u7ED9\u7F51_aigei_com_14": 7164977262160376121
+      "006_\u7231\u7ED9\u7F51_aigei_com_5": -8715587205194953064
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
