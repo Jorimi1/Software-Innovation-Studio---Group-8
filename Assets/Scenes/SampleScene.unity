@@ -1710,7 +1710,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6776daa6f1e30294cb0bfc1cc6db223a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recognizerXml: {fileID: 4900000, guid: aac0ea5b07063574088c0c95ae97833d, type: 3}
+  recognizerXml: {fileID: 4900000, guid: 2e0de9be36bd96f40b4768bd9ec02c0d, type: 3}
+  emotion_status: 
 --- !u!64 &1145731964
 MeshCollider:
   m_ObjectHideFlags: 0

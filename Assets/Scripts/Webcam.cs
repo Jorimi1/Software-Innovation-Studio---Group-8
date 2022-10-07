@@ -12,6 +12,7 @@ public class Webcam : MonoBehaviour
     private FaceRecognizer recognizer;
     private string[] emotion;
     private readonly Size requiredSize = new Size(128, 128);
+    public string emotion_status = null;
 
     void Start()
     {
@@ -30,6 +31,8 @@ public class Webcam : MonoBehaviour
 
     private void Update()
     {
+
+        Debug.Log(emotion_status);
         Mat image = OpenCvSharp.Unity.TextureToMat(webcamTexture);
         var gray = image.CvtColor(ColorConversionCodes.BGR2GRAY);
 
@@ -47,11 +50,9 @@ public class Webcam : MonoBehaviour
 
             int label = -1;
             double confidence = 0.0;
-            Debug.Log("Confidence");
             recognizer.Predict(grayFace, out label, out confidence);
 
             bool found = confidence < 1200;
-            Debug.Log(confidence);
             Scalar frameColour = found ? Scalar.LightGreen : Scalar.Red;
 
             Cv2.Rectangle((InputOutputArray)image, faceRect, frameColour, 2);
@@ -60,6 +61,10 @@ public class Webcam : MonoBehaviour
             const int textPadding = 2;
             const double textScale = 2.0;
             string message = string.Format("{0}", emotion[label], (int)confidence);
+
+            emotion_status = emotion[label];
+
+            emotion_status = emotion[label];
             var textSize = Cv2.GetTextSize(message, HersheyFonts.HersheyPlain, textScale, 1, out line);
 
             var textBox = new OpenCvSharp.Rect(
