@@ -4615,6 +4615,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 501333830757517194, guid: d69b85bb54d214d419643270e1596443, type: 3}
+      propertyPath: gameObject
+      value: 
+      objectReference: {fileID: 1093766609}
     - target: {fileID: 501333831222658480, guid: d69b85bb54d214d419643270e1596443, type: 3}
       propertyPath: m_Name
       value: Boss
