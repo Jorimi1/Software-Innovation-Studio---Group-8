@@ -33,6 +33,7 @@ public class Webcam : MonoBehaviour
     {
 
         Debug.Log(emotion_status);
+        BossToWin.PassValue(emotion_status);
         Mat image = OpenCvSharp.Unity.TextureToMat(webcamTexture);
         var gray = image.CvtColor(ColorConversionCodes.BGR2GRAY);
 

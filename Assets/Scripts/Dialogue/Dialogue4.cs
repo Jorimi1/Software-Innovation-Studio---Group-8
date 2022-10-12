@@ -4,7 +4,7 @@ using UnityEngine;
 using Doublsb.Dialog;
 using UnityEngine.SceneManagement;
 
-public class Dialogue2 : MonoBehaviour
+public class Dialogue4 : MonoBehaviour
 {
     public DialogManager DialogManager;
 
@@ -12,10 +12,10 @@ public class Dialogue2 : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        var line1 = new DialogData("OHHHHHH, I did it!", "Player");
-        var line2 = new DialogData("Your...I lost...", "Boss2");
-        var line3 = new DialogData("Now the whole world will be peace again!", "Player");
-        var line4 = new DialogData("Ummmm...no...", "Boss2");
+        var line1 = new DialogData("I am finally here, but I am so sad", "Player");
+        var line2 = new DialogData("why...", "Boss2");
+        var line3 = new DialogData("I am.. full of blood, just because of you!", "Player");
+        var line4 = new DialogData("......", "Boss2");
 
 
         
