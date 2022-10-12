@@ -6,14 +6,26 @@ public class PrefabWeapon : MonoBehaviour {
 
 	public Transform firePoint;
 	public GameObject bulletPrefab;
-	
+
+	public Webcam webcam;
+	public bool isRes = false;
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown("Fire1"))
-		{
-			Shoot();
-		}
-	}
+
+
+        if (webcam.emotion_status == "Happy")
+        {
+            Shoot();
+        }
+
+
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //    Shoot();
+        //}
+
+
+    }
 
 	void Shoot ()
 	{
