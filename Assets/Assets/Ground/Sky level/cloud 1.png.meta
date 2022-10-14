@@ -81,6 +81,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -135,6 +136,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -557,6 +570,26 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      cloud 1_16: 9202455144806549255
+      cloud 1_2: -1240064822424522933
+      cloud 1_6: -5128709983523525787
+      cloud 1_14: 7078006597382652510
+      cloud 1_13: -6590193816595794474
+      cloud 1_17: -8911599744276982226
+      cloud 1_1: -2876492827512060937
+      cloud 1_12: 215976707748532372
+      cloud 1_10: -4050477480436943993
+      cloud 1_18: -7901068124375979177
+      cloud 1_8: 1542111686274676847
+      cloud 1_11: 6306452036828673696
+      cloud 1_5: -5435582705871977887
+      cloud 1_3: -3713347560956229805
+      cloud 1_4: -2114020486079190775
+      cloud 1_15: -4509967984601871888
+      cloud 1_7: 4834691777304114409
+      cloud 1_9: -5761923686234176092
+      cloud 1_0: 2376446669393558698
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
