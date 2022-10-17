@@ -14,7 +14,7 @@ public class Dialogue2 : MonoBehaviour
 
         var line1 = new DialogData("I did it!", "Player");
         var line2 = new DialogData("I lost...", "Boss2");
-        var line3 = new DialogData("Now the forest wiil be pease again", "Player");
+        var line3 = new DialogData("Now the forest will be at peace again", "Player");
         var line4 = new DialogData("Ummmm...", "Boss2");
 
 
