@@ -1451,7 +1451,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8015acd9147d79746bfcc3f81c7790ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webcam: {fileID: 305953488}
 --- !u!1 &526836764
 GameObject:
   m_ObjectHideFlags: 0
@@ -4935,6 +4934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90bc892a2ccb06747a114bdf42e322c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  webcam: {fileID: 0}
 --- !u!95 &1754584081
 Animator:
   serializedVersion: 4
@@ -5104,6 +5104,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   firePoint: {fileID: 614614753}
   bulletPrefab: {fileID: 1539632861300792, guid: 96ae8f9dd8fd89941bc4d858375f035b, type: 3}
+  webcam: {fileID: 305953488}
+  isRes: 0
 --- !u!1 &1770787242
 GameObject:
   m_ObjectHideFlags: 0
