@@ -12,10 +12,12 @@ public class Dialogue2 : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        var line1 = new DialogData("OHHHHHH, I did it!", "Player");
-        var line2 = new DialogData("Your...I lost...", "Boss2");
-        var line3 = new DialogData("Now the whole world will be peace again!", "Player");
-        var line4 = new DialogData("Ummmm...no...", "Boss2");
+
+        var line1 = new DialogData("I did it!", "Player");
+        var line2 = new DialogData("I lost...", "Boss2");
+        var line3 = new DialogData("Now the forest will be at peace again", "Player");
+        var line4 = new DialogData("Ummmm...", "Boss2");
+
 
 
         
