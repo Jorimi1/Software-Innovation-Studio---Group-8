@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Bullet : MonoBehaviour {
-	public Webcam webcam;
+	//private Webcam webcam;
 	public float speed = 20f;
 	public int damage = 40;
 	public Rigidbody2D rb;
 	public GameObject impactEffect;
+	public static string emotion;
 
 	// Use this for initialization
 	void Start () {
@@ -17,17 +18,20 @@ public class Bullet : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D hitInfo)
 	{
 		BossHealth enemy = hitInfo.GetComponent<BossHealth>();
-		string emotion = webcam.emotion_status;
+		//string emotion = webcam.emotion_status;
 
 		if (enemy != null) 
 		{
+			enemy.TakeDamage(damage);
 			if (emotion == "Happy")
 			{
 				enemy.TakeDamage(damage*2);
 			}
 			else if (emotion == "Sad")
 			{
-				enemy.TakeDamage(damage/2);
+				enemy.TakeDamage(damage/8);
+			}else{
+				enemy.TakeDamage(damage);
 			}
 		}
 
@@ -35,5 +39,13 @@ public class Bullet : MonoBehaviour {
 
 		Destroy(gameObject);
 	}
+
+	public static void PassValue(string s){
+        emotion =  s;
+        Debug.Log(emotion);
+    }
+
+
+   
 	
 }

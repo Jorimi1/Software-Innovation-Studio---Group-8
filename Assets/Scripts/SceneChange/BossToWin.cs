@@ -5,12 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class BossToWin : MonoBehaviour
 {
-    public Webcam webcam;
+    //public Webcam webcam;
+    private static string emotion;
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player")
         {
-            string emotion = webcam.emotion_status;
+            //string emotion = webcam.emotion_status;
 
             switch (emotion) {
                 case "Happy":
