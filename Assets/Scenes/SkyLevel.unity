@@ -1130,6 +1130,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4716e20291d644e4f95e931dfb877726, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  web: {fileID: 1863277795}
 --- !u!1 &118437515
 GameObject:
   m_ObjectHideFlags: 0
@@ -1631,6 +1632,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 536ed72908349844a8eb322f8bf2594f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  web: {fileID: 1863277795}
 --- !u!61 &144887435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -16077,6 +16079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 0}
+  web: {fileID: 1863277795}
 --- !u!212 &1022445554
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30496,6 +30499,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6776daa6f1e30294cb0bfc1cc6db223a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  recognizerXml: {fileID: 0}
+  webcamTexture: {fileID: 0}
+  emotion_status: 
 --- !u!64 &1863277796
 MeshCollider:
   m_ObjectHideFlags: 0

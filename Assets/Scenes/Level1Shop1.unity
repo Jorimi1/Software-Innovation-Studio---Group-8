@@ -4981,6 +4981,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   recognizerXml: {fileID: 4900000, guid: c38320a65607b454b86169ea40b2a84c, type: 3}
+  webcamTexture: {fileID: 0}
   emotion_status: 
 --- !u!64 &1688073623
 MeshCollider:
@@ -5516,6 +5517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 0}
+  web: {fileID: 1688073622}
 --- !u!61 &1908775996
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5719,6 +5721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameObject: {fileID: 0}
+  web: {fileID: 1688073622}
 --- !u!1 &2091163881
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class Shop1ToLevel1 : MonoBehaviour
 {
     public GameObject gameObject;
+    public Webcam web;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Shop1ToLevel1 : MonoBehaviour
             //text.enabled=true;
             if(Input.GetKeyDown(KeyCode.H)){
                 SceneManager.LoadScene("Level1");
+                web.webcamTexture.Stop();
                 //Instantiate(gameObject, new Vector3(30, 0, 0), Quaternion.identity);
             }
         }
