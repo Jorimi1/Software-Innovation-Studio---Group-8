@@ -12,10 +12,10 @@ public class Dialogue1 : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        var line1 = new DialogData("xxxxxxxxxxxxxx", "Player");
-        var line2 = new DialogData("yyyyyyyyyyyyyyyyyyyyyyyyyyyy", "Boss1");
-        var line3 = new DialogData("xxxxxxxxxxxxxxxxxxx", "Player");
-        var Text1 = new DialogData("uuuuuuuuuuuu?", "Boss1");
+        var line1 = new DialogData("Hi", "Player");
+        var line2 = new DialogData("NO HI", "Boss1");
+        var line3 = new DialogData("Why no hi?", "Player");
+        var Text1 = new DialogData("Why hi?", "Boss1");
         Text1.SelectList.Add("c1", "10");
         Text1.SelectList.Add("c2", "7");
         Text1.SelectList.Add("c3", "idk");
