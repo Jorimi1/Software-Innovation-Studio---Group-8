@@ -6,13 +6,18 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 
+	public Webcam webcam;
 	public int health = 100;
-
 	public GameObject deathEffect;
 
 	public void TakeDamage(int damage)
 	{
-		health -= damage;
+		string emotion = webcam.emotion_status;
+
+		if (emotion == "Angry")
+		{
+			health -= damage*2;
+		}
 
 		StartCoroutine(DamageAnimation());
 
