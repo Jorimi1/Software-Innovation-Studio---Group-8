@@ -7,6 +7,7 @@ public class BossToWin : MonoBehaviour
 {
     //public Webcam webcam;
     private static string emotion;
+    public Webcam web;
 
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player")
@@ -16,15 +17,19 @@ public class BossToWin : MonoBehaviour
             switch (emotion) {
                 case "Happy":
                     SceneManager.LoadScene("HappyWinDialogue");
+                    web.webcamTexture.Stop();
                     break;
                 case "Angry":
                     SceneManager.LoadScene("AngryWinDialogue");
+                    web.webcamTexture.Stop();
                     break;
                 case "Sad":
                     SceneManager.LoadScene("SadWinDialogue");
+                    web.webcamTexture.Stop();
                     break;
                 default:
                     SceneManager.LoadScene("Dialogue2");
+                    web.webcamTexture.Stop();
                     break;
             }
 
