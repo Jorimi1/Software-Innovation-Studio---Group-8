@@ -5,21 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class BossToWin : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    //public Webcam webcam;
+    private static string emotion;
+    public Webcam web;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Dialogue2");
+            //string emotion = webcam.emotion_status;
+
+            switch (emotion) {
+                case "Happy":
+                    SceneManager.LoadScene("HappyWinDialogue");
+                    web.webcamTexture.Stop();
+                    break;
+                case "Angry":
+                    SceneManager.LoadScene("AngryWinDialogue");
+                    web.webcamTexture.Stop();
+                    break;
+                case "Sad":
+                    SceneManager.LoadScene("SadWinDialogue");
+                    web.webcamTexture.Stop();
+                    break;
+                default:
+                    SceneManager.LoadScene("Dialogue2");
+                    web.webcamTexture.Stop();
+                    break;
+            }
+
         }
+    }
+
+    public static void PassValue(string s){
+        emotion =  s;
     }
 }

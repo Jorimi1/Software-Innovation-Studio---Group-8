@@ -137,6 +137,25 @@ public class PlayerMovement : MonoBehaviour
             ac.SetBool("MoveLeft", false); 
             
         }
+
     }
+
+    /*void onCollisionEnter2D(Collision2D other)
+    {
+
+        if (other.gameObject.tag == "MovingCloud")
+        {
+            this.transform.parent = other.transform;
+        }
+    }
+
+    void onCollisionExit2d(Collision2D other)
+    {
+
+        if (other.gameObject.tag == "MovingCloud")
+        {
+            this.transform.parent = null;
+        }
+    }*/
 }
 

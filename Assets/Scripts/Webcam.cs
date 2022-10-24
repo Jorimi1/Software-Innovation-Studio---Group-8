@@ -7,7 +7,7 @@ using OpenCvSharp.Face;
 public class Webcam : MonoBehaviour
 {
     public UnityEngine.TextAsset recognizerXml;
-    private WebCamTexture webcamTexture;
+    public WebCamTexture webcamTexture;
     private CascadeClassifier cascade;
     private FaceRecognizer recognizer;
     private string[] emotion;
@@ -17,6 +17,7 @@ public class Webcam : MonoBehaviour
     void Start()
     {
         webcamTexture = new WebCamTexture();
+
         Renderer renderer = GetComponent<Renderer>();
         renderer.material.mainTexture = webcamTexture;
         renderer.material.shader = Shader.Find("Unlit/Texture");
@@ -32,7 +33,9 @@ public class Webcam : MonoBehaviour
     private void Update()
     {
 
-        Debug.Log(emotion_status);
+        //Debug.Log(emotion_status);
+        Bullet.PassValue(emotion_status);
+        BossToWin.PassValue(emotion_status);
         Mat image = OpenCvSharp.Unity.TextureToMat(webcamTexture);
         var gray = image.CvtColor(ColorConversionCodes.BGR2GRAY);
 
