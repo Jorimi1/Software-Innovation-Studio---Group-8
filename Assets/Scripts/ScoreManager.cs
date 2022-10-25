@@ -7,13 +7,29 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
-    public TextMeshProUGUI text;
-    int score;
+    //public TextMeshProUGUI text;
+    [SerializeField] private TMP_Text text;
+    [SerializeField] private PlayerCollect playerCollect;
+    
+
+void Update()
+    {
+        text.text = "x " + playerCollect.getScore().ToString();
+    }
+
+   // public static ScoreManager instance;
+    
+    //[SerializeField] private int score;
+
+   /* private void OnEnable()
+    {
+        score = PlayerPrefs.GetInt("CollectedApples");
+
+    }
 
     void Start()
     {
-        score = PlayerPrefs.GetInt("CollectedApples");
+       // score = PlayerPrefs.GetInt("CollectedApples");
 
         if (instance == null)
         {
@@ -25,7 +41,17 @@ public class ScoreManager : MonoBehaviour
     {
         score += value;
         text.text = "x" + score.ToString();
+        
+    }
+
+    private void OnDestroy()
+    {
+        saveScore();
+    }
+    void saveScore()
+    {
         PlayerPrefs.SetInt("CollectedApples", score);
+        PlayerPrefs.Save();
     }
     /*public Image image1;
     public Image image2;

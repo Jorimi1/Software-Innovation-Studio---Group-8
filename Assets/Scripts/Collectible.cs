@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Collectible : MonoBehaviour
 {
-    public int value = 1;
+   /* public int value = 1;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -12,5 +12,5 @@ public class Collectible : MonoBehaviour
         {
             ScoreManager.instance.ChangeScore(value);
         }
-    }
+    }*/
 }

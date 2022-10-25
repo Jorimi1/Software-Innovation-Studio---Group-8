@@ -5,9 +5,16 @@ using UnityEngine;
 public class PlayerCollect : MonoBehaviour
 {
     public Webcam webcam;
+    [SerializeField] private int score;
 
-   
     // Start is called before the first frame update
+    private void OnEnable()
+    {
+        if (PlayerPrefs.HasKey("Apples"))
+        {
+            score = PlayerPrefs.GetInt("Apples");
+        }
+    }
     void Start()
     {
         
@@ -19,11 +26,30 @@ public class PlayerCollect : MonoBehaviour
         
     }
 
-    void OnTriggerEnter2D(Collider2D other){
-        if(other.gameObject.tag == "Collection")
+    public int getScore()
+    {
+        return score;
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.tag == "Collection")
         {
-           // ScoreManager.instance.collectItem();                           
+            // ScoreManager.instance.collectItem();                           
             Destroy(other.gameObject);
+            score++;
+            Debug.Log(PlayerPrefs.GetInt("Apples"));
+        }
+    }
+
+    private void OnDestroy()
+        {
+            saveScore();
+        }
+
+    void saveScore()
+        {
+            PlayerPrefs.SetInt("Apples", score);
+            PlayerPrefs.Save();
         }
 
        /* if (other.gameObject.tag == "NPC1")
@@ -38,5 +64,6 @@ public class PlayerCollect : MonoBehaviour
                 gameManager.showColudOrDown(false);
             }
         }*/
-    }
+    
 }
+
