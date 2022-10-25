@@ -13,10 +13,16 @@ public class PrefabWeapon : MonoBehaviour {
 	void Update () {
 
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            Shoot();
-        }
+		if (webcam.emotion_status == "Happy")
+		{
+			Shoot();
+		}
+
+
+		//if (Input.GetMouseButtonDown(0))
+  //      {
+  //          Shoot();
+  //      }
 
 
     }
