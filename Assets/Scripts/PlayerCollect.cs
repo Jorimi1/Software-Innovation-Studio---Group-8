@@ -22,11 +22,11 @@ public class PlayerCollect : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag == "Collection")
         {
-            ScoreManager.instance.collectItem();                           
+           // ScoreManager.instance.collectItem();                           
             Destroy(other.gameObject);
         }
 
-        if (other.gameObject.tag == "NPC1")
+       /* if (other.gameObject.tag == "NPC1")
         {
             var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
             if (webcam.emotion_status == "Happy")
@@ -37,6 +37,6 @@ public class PlayerCollect : MonoBehaviour
 
                 gameManager.showColudOrDown(false);
             }
-        }
+        }*/
     }
 }

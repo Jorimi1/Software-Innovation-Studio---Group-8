@@ -8,12 +8,31 @@ using UnityEngine.SceneManagement;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager instance;
-    public Image image1;
+    public TextMeshProUGUI text;
+    int score;
+
+    void Start()
+    {
+        score = PlayerPrefs.GetInt("CollectedApples");
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    public void ChangeScore (int value)
+    {
+        score += value;
+        text.text = "x" + score.ToString();
+        PlayerPrefs.SetInt("CollectedApples", score);
+    }
+    /*public Image image1;
     public Image image2;
     public Image image3;
     public static float Score { set; get; }
     public static int collectedNumber = 0;
-
+    
     void Awake(){}
 
     void Start()
@@ -87,5 +106,5 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("collectedapple", collectedNumber);
             Debug.Log(PlayerPrefs.GetInt("collectedapple"));
         }
-    }
+    }*/
 }

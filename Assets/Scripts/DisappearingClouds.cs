@@ -7,17 +7,30 @@ public class DisappearingClouds : MonoBehaviour
     private float fallDelay = 1f;
     private float destroyDelay = 2f;
 
-    private Rigidbody2D rb;  
+    private Rigidbody2D rb;
+    //public Collider2D cloud;
+    //public Collider2D player;
 
     // Start is called before the first frame update
     void Start ()
     {
         rb = GetComponent<Rigidbody2D>();
+        //cloud = GameObject.FindGameObjectWithTag("DisappearingCloud").GetComponent<Collider2D>();
+        //player = GameObject.FindGameObjectWithTag("Player").GetComponent<Collider2D>();
+        Physics2D.IgnoreLayerCollision(3, 3);
     }
-    
-    void onCollisionEnter2D (Collision2D col)
+
+    /*private void Collide()
     {
-        if (col.gameObject.CompareTag("Player"))
+        if (cloud.IsTouching(player))
+        {
+            Debug.Log("touching");
+        }
+    }*/
+    
+    void OnCollisionEnter2D (Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
         {
             StartCoroutine(Fall());
             Debug.Log("Player collision");
@@ -28,7 +41,7 @@ public class DisappearingClouds : MonoBehaviour
     IEnumerator Fall()
     {
         yield return new WaitForSeconds(fallDelay);
-        rb.isKinematic = false;
+        rb.bodyType = RigidbodyType2D.Dynamic;
         Destroy(gameObject, destroyDelay);
     }
 
