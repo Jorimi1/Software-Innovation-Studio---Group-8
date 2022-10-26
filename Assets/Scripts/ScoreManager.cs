@@ -7,8 +7,8 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    //public TextMeshProUGUI text;
-    [SerializeField] private TMP_Text text;
+    public TextMeshProUGUI text;
+    //[SerializeField] private TMP_Text text;
     [SerializeField] private PlayerCollect playerCollect;
     
 
