@@ -52,11 +52,7 @@ public class PlayerCollect : MonoBehaviour
             PlayerPrefs.SetInt("Apples", score);
             PlayerPrefs.Save();
 
-        if (instance == null)
-        {
-            instance = this;
-        }
-
+        
     }
 
     /* if (other.gameObject.tag == "NPC1")

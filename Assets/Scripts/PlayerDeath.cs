@@ -10,6 +10,7 @@ public class PlayerDeath : MonoBehaviour
 
     void Start()
     {
+        PlayerPrefs.SetInt("Apples", 1);
         /*Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (sceneName == "SkyLevel")
@@ -29,8 +30,14 @@ public class PlayerDeath : MonoBehaviour
             respawnPoint = GameObject.Find("RespawnPoint").transform.position;
             if (other.gameObject.tag == "FallDetector")
             {
+                
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                
                 transform.position = respawnPoint;
+                PlayerPrefs.SetInt("Apples", 1);
+
             }
+            
         }
 
         /*if (other.gameObject.tag == "FallDetector")
