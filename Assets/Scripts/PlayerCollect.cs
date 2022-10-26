@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerCollect : MonoBehaviour
 {
     public Webcam webcam;
+    public static PlayerCollect instance;
     [SerializeField] private int score;
 
     // Start is called before the first frame update
@@ -26,7 +27,7 @@ public class PlayerCollect : MonoBehaviour
         
     }
 
-    public int getScore()
+    public int GetScore()
     {
         return score;
     }
@@ -50,20 +51,26 @@ public class PlayerCollect : MonoBehaviour
         {
             PlayerPrefs.SetInt("Apples", score);
             PlayerPrefs.Save();
+
+        if (instance == null)
+        {
+            instance = this;
         }
 
-       /* if (other.gameObject.tag == "NPC1")
-        {
-            var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-            if (webcam.emotion_status == "Happy")
-            {
-                gameManager.showColudOrDown(true);
-            }
-            else if (webcam.emotion_status == "Sad") {
+    }
 
-                gameManager.showColudOrDown(false);
-            }
-        }*/
-    
+    /* if (other.gameObject.tag == "NPC1")
+     {
+         var gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
+         if (webcam.emotion_status == "Happy")
+         {
+             gameManager.showColudOrDown(true);
+         }
+         else if (webcam.emotion_status == "Sad") {
+
+             gameManager.showColudOrDown(false);
+         }
+     }*/
+
 }
 

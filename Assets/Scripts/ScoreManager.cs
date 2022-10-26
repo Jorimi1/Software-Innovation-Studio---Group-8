@@ -7,15 +7,21 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public TextMeshProUGUI text;
-    //[SerializeField] private TMP_Text text;
-    [SerializeField] private PlayerCollect playerCollect;
     
+    [SerializeField] private TMP_Text text;
+    [SerializeField] private PlayerCollect PlayerCollect;
+    
+    void Start()
+    {
+        PlayerCollect = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollect>();
+    }
 
 void Update()
     {
-        text.text = "x " + playerCollect.getScore().ToString();
+        text.text = "x " + PlayerCollect.GetScore().ToString();
     }
+
+
 
    // public static ScoreManager instance;
     
