@@ -10,7 +10,7 @@ public class PlayerDeath : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.SetInt("Apples", 1);
+   
         /*Scene currentScene = SceneManager.GetActiveScene();
         string sceneName = currentScene.name;
         if (sceneName == "SkyLevel")
