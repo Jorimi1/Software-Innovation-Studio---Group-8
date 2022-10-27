@@ -12,13 +12,13 @@ public class Dialogue1 : MonoBehaviour
     {
         var dialogTexts = new List<DialogData>();
 
-        var line1 = new DialogData("xxxxxxxxxxxxxx", "Player");
-        var line2 = new DialogData("yyyyyyyyyyyyyyyyyyyyyyyyyyyy", "Boss1");
-        var line3 = new DialogData("xxxxxxxxxxxxxxxxxxx", "Player");
-        var Text1 = new DialogData("uuuuuuuuuuuu?", "Boss1");
-        Text1.SelectList.Add("c1", "10");
-        Text1.SelectList.Add("c2", "7");
-        Text1.SelectList.Add("c3", "idk");
+        var line1 = new DialogData("Finally, I found you...", "Player");
+        var line2 = new DialogData("Took you some time... did you get stuck on the sky level?", "Boss1");
+        var line3 = new DialogData("Wasn't easy with these game mechanics", "Player");
+        var Text1 = new DialogData("get gud, why are you here..?", "Boss1");
+        Text1.SelectList.Add("c1", "To save you");
+        Text1.SelectList.Add("c2", "To get my emotions back");
+        Text1.SelectList.Add("c3", "To escape the matrix");
 
         
         dialogTexts.Add(line1);

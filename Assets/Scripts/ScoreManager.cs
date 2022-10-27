@@ -7,13 +7,64 @@ using UnityEngine.SceneManagement;
 
 public class ScoreManager : MonoBehaviour
 {
-    public static ScoreManager instance;
-    public Image image1;
+    
+    [SerializeField] private TMP_Text text;
+    [SerializeField] private PlayerCollect PlayerCollect;
+    
+    void Start()
+    {
+        PlayerCollect = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollect>();
+    }
+
+void Update()
+    {
+        text.text = "x " + PlayerCollect.GetScore().ToString();
+    }
+
+
+
+   // public static ScoreManager instance;
+    
+    //[SerializeField] private int score;
+
+   /* private void OnEnable()
+    {
+        score = PlayerPrefs.GetInt("CollectedApples");
+
+    }
+
+    void Start()
+    {
+       // score = PlayerPrefs.GetInt("CollectedApples");
+
+        if (instance == null)
+        {
+            instance = this;
+        }
+    }
+
+    public void ChangeScore (int value)
+    {
+        score += value;
+        text.text = "x" + score.ToString();
+        
+    }
+
+    private void OnDestroy()
+    {
+        saveScore();
+    }
+    void saveScore()
+    {
+        PlayerPrefs.SetInt("CollectedApples", score);
+        PlayerPrefs.Save();
+    }
+    /*public Image image1;
     public Image image2;
     public Image image3;
     public static float Score { set; get; }
     public static int collectedNumber = 0;
-
+    
     void Awake(){}
 
     void Start()
@@ -87,5 +138,5 @@ public class ScoreManager : MonoBehaviour
             PlayerPrefs.SetInt("collectedapple", collectedNumber);
             Debug.Log(PlayerPrefs.GetInt("collectedapple"));
         }
-    }
+    }*/
 }

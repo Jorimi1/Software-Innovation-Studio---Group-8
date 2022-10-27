@@ -68,8 +68,6 @@ public class Webcam : MonoBehaviour
             string message = string.Format("{0}", emotion[label], (int)confidence);
 
             emotion_status = emotion[label];
-
-            emotion_status = emotion[label];
             var textSize = Cv2.GetTextSize(message, HersheyFonts.HersheyPlain, textScale, 1, out line);
 
             var textBox = new OpenCvSharp.Rect(
