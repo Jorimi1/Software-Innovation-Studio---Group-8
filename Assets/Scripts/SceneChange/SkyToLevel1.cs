@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class SkyToLevel1 : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Webcam web;
     void Start()
     {
         
@@ -22,6 +23,7 @@ public class SkyToLevel1 : MonoBehaviour
             //text.enabled=true;
             if(Input.GetKeyDown(KeyCode.H)){
                 SceneManager.LoadScene("Level1");
+                web.webcamTexture.Stop();
                 //Instantiate(gameObject, new Vector3(30, 0, 0), Quaternion.identity);
             }
         }

@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChangeSceneWithBtn : MonoBehaviour
 {
     // Start is called before the first frame update
+    public Webcam web;
     void Start()
     {
         
@@ -17,7 +18,8 @@ public class ChangeSceneWithBtn : MonoBehaviour
 
     }
     public void Changescene(string name) {  
-        SceneManager.LoadScene("Start Menu");  
+        SceneManager.LoadScene("Start Menu");
+        web.webcamTexture.Stop();
         Debug.Log("Works");
     }  
 }

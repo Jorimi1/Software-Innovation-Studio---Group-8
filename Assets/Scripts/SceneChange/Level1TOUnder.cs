@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Level1TOUnder : MonoBehaviour
 {
     public TextMeshPro text;
+    private Webcam web;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Level1TOUnder : MonoBehaviour
             text.enabled=true;
             if(Input.GetKeyDown(KeyCode.H)){
                 SceneManager.LoadScene("UnderLevel");
+                web.webcamTexture.Stop();
                 DontDestroyOnLoad(other);
             }
         }

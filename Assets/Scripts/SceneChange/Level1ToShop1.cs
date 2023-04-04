@@ -6,6 +6,7 @@ using TMPro;
 public class Level1ToShop1 : MonoBehaviour
 {
     public TextMeshPro text;
+    public Webcam web;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class Level1ToShop1 : MonoBehaviour
             text.enabled=true;
             if(Input.GetKeyDown(KeyCode.H)){
                 SceneManager.LoadScene("Level1Shop1");
+                web.webcamTexture.Stop();
                 DontDestroyOnLoad(other);
                 //DontDestroyOnLoad(cam);
             }

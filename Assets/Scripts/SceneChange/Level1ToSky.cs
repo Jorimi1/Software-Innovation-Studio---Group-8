@@ -7,6 +7,7 @@ using TMPro;
 public class Level1ToSky : MonoBehaviour
 {
     public TextMeshPro text;
+    public Webcam web;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +25,7 @@ public class Level1ToSky : MonoBehaviour
             text.enabled=true;
             if(Input.GetKeyDown(KeyCode.H)){
                 SceneManager.LoadScene("SkyLevel");
+                web.webcamTexture.Stop();
                 DontDestroyOnLoad(other);
                 //DontDestroyOnLoad(cam);
             }

@@ -26,6 +26,7 @@ public class BossHealth : MonoBehaviour
 		if (health <= 0)
 		{
 			Die();
+			BossAudio.BossDead = 1;
 		}
 	}
 
